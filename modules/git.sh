@@ -47,7 +47,7 @@ then
 
    crontab -l > $SEVABOT_HOME/custom/cron
    #echo new cron into cron file
-   echo "*/5 * * * * bash $SEVABOT_HOME/custom/git.sh $CHAT_ID" >> $SEVABOT_HOME/custom/cron
+   echo "*/5+2 * * * * bash $SEVABOT_HOME/custom/git.sh $CHAT_ID" >> $SEVABOT_HOME/custom/cron
    #install new cron file
    crontab $SEVABOT_HOME/custom/cron
    rm $SEVABOT_HOME/custom/cron

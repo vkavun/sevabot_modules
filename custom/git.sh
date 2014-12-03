@@ -1,21 +1,5 @@
 #!/bin/bash
-
-# ADDING PYTHON CODE, TO GET GIT REPO, HTTP HOST, HTTP PORT, SHARED SECRET VARIABLES
-echo "print GIT_REPO" >> $(dirname $0)/../settings.py
-GIT_REPO=$(python $(dirname $0)/../settings.py)
-sed -i '$ d' $(dirname $0)/../settings.py
-
-echo "print SHARED_SECRET" >> $(dirname $0)/../settings.py
-SHARED_SECRET=$(python $(dirname $0)/../settings.py)
-sed -i '$ d' $(dirname $0)/../settings.py
-
-echo "print HTTP_PORT" >> $(dirname $0)/../settings.py
-HTTP_PORT=$(python $(dirname $0)/../settings.py)
-sed -i '$ d' $(dirname $0)/../settings.py
-
-echo "print HTTP_HOST" >> $(dirname $0)/../settings.py
-HTTP_HOST=$(python $(dirname $0)/../settings.py)
-sed -i '$ d' $(dirname $0)/../settings.py
+. $(dirname $0)/../git_jira_settings.sh
 
 # GETTING GIT LOG
 cd $GIT_REPO

@@ -77,6 +77,7 @@ qa.server2.com  -  1.2.s2.6-SNAPSHOT
 ## who
 
 This command returns user who's logged in specific qa server.
+Also it returns date+time of a last POST or GET request to this server (helps to understand if someone uses it right now)
 Please list all QA servers in `settings.py` file. That sevabot can check correctness of qa server url, passed to this command
 
 Usage exmaple: 

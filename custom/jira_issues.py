@@ -19,4 +19,4 @@ issues = jira.search_issues(settings.JIRA_QUERY)
 # print issues
 
 for s in issues:
-    print s.fields.reporter.displayName + " - " + settings.JIRA_SERVER + "/browse/" + s.key
+    print s.fields.reporter.displayName + " - " + settings.JIRA_SERVER + "/browse/" + s.key + "  - " + s.fields.summary
